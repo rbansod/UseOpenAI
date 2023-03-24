@@ -17,7 +17,7 @@ def generate_questions_and_answers(text, max_questions=5):
         max_tokens=200,
         n=1,
         stop=None,
-        temperature=0.7,
+        temperature=0.7, """Play around with this number for accuracy"""
     )
 
     generated_text = response.choices[0].text.strip()
