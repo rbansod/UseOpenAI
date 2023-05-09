@@ -12,11 +12,12 @@ public class RedisService {
         this.redisTemplate = redisTemplate;
     }
 
-    public void setValue(String key, Object value) {
+    public void setValue(String key, String value) {
         redisTemplate.opsForValue().set(key, value);
     }
 
-    public Object getValue(String key) {
-        return redisTemplate.opsForValue().get(key);
+    public String getValue(String key) {
+        return (String) redisTemplate.opsForValue().get(key);
     }
+
 }
